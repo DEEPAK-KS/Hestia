@@ -83,7 +83,7 @@ const FooterEnd = () => {
         {/* Footer Bottom */}
         <div className="container mx-auto mt-12 px-4 lg:px-0  border-t border-gray-200 pt-6">
             <p className='tetx-gray-500 text-sm tracking-tight text-center'>
-                © 2025 KAIZEN, All Rights Reserved.
+                © 2025 KAIZEN (Deepak), All Rights Reserved.
             </p>
         </div>
         
