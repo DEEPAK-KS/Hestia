@@ -61,7 +61,7 @@ return (
                                                                         {order.shippingAddress.address}, {order.shippingAddress.city}, {order.shippingAddress.country}
                                                                 </td>
                                                                 <td className="px-2 py-2 sm:py-4 sm:px-4">{order.orderItems.length}</td>
-                                                                <td className="px-2 py-2 sm:py-4 sm:px-4">₹{order.totalPrice}</td>
+                                                                <td className="px-2 py-2 sm:py-4 sm:px-4">₹{order.totalPrice.toFixed(2)}</td>
                                                                 <td className="px-2 py-2 sm:py-4 sm:px-4">
                                                                         {order.isPaid ? (
                                                                                 <span className="text-green-600 font-semibold">Paid</span>
