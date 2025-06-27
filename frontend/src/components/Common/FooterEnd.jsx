@@ -76,7 +76,7 @@ const FooterEnd = () => {
                 <p className='texy-gray-500'>Call Us</p>
                 <p>
                 <FiPhoneCall className='inline-block mr-2'/>
-                +91 95478 54879
+                +91 96334 30662
                 </p>
             </div>
         </div>
