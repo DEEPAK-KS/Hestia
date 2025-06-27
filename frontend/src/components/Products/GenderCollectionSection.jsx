@@ -1,5 +1,5 @@
 import React from 'react'
-import mensCollection from '../../assets/mens-Collection.webp'
+import mensCollection from '../../assets/mens-collection.webp'
 import womensCollection from '../../assets/womens-Collection.webp'
 import { Link } from 'react-router-dom'
 
