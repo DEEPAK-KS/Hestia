@@ -69,9 +69,9 @@ const FooterEnd = () => {
                     Follow Us
                 </h3>
                 <div className="flex items-center space-x-4 mb-6">
-                    <a href="Facebook.com" target='_blank' rel='noopener noreferrer' className='hover:text-gray-300'><TbBrandMeta className='h-5 w-5'/></a>
-                    <a href="Facebook.com" target='_blank' rel='noopener noreferrer' className='hover:text-gray-300'><IoLogoInstagram className='h-5 w-5'/></a>
-                    <a href="Facebook.com" target='_blank' rel='noopener noreferrer' className='hover:text-gray-300'><RiTwitterXLine className='h-4 w-4'/></a>
+                    <a href="https://www.facebook.com/deepak.ks.56614?mibextid=ZbWKwL" target='_blank' rel='noopener noreferrer' className='hover:text-gray-300'><TbBrandMeta className='h-5 w-5'/></a>
+                    <a href="https://www.instagram.com/deepak_ks_official/" target='_blank' rel='noopener noreferrer' className='hover:text-gray-300'><IoLogoInstagram className='h-5 w-5'/></a>
+                    <a href="https://www.linkedin.com/in/depak-ks/" target='_blank' rel='noopener noreferrer' className='hover:text-gray-300'><RiTwitterXLine className='h-4 w-4'/></a>
                 </div>
                 <p className='texy-gray-500'>Call Us</p>
                 <p>
