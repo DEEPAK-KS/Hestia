@@ -66,7 +66,7 @@ const Navbar = () => {
             <nav className='space-y-4'>
                 <Link to="/collections/all?gender=Men" className='block text-gray-700 hover:text-black text-sm font-medium uppercase' onClick={togglrNavDrawer}>MEN</Link>
                 <Link to="/collections/all?gender=Women" className='block text-gray-700 hover:text-black text-sm font-medium uppercase' onClick={togglrNavDrawer}>Women</Link>
-                <Link to="/collections/all?category=Top+Wear" className='block text-gray-700 hover:text-black text-sm font-medium uppercase' onClick={togglrNavDrawer}>Top Weare</Link>
+                <Link to="/collections/all?category=Top+Wear" className='block text-gray-700 hover:text-black text-sm font-medium uppercase' onClick={togglrNavDrawer}>Top Wear</Link>
                 <Link to="/collections/all?category=Bottom+Wear" className='block text-gray-700 hover:text-black text-sm font-medium uppercase' onClick={togglrNavDrawer}>Bottom Wear</Link>
             </nav>
         </div>
