@@ -13,8 +13,9 @@ const Register = () => {
   const location = useLocation();
   const dispatch = useDispatch();
   
-  const {user, guestId, loading} = useSelector((state) => state.auth)
+  const {user, guestId, loading, error} = useSelector((state) => state.auth)
   const {cart} = useSelector((state) => state.cart)
+  const [showPassword, setShowPassword] = useState(false);
 
   // get the redirect parameter and check if its checkout or something
   const redirect = new URLSearchParams(location.search).get('redirect') || '/';
@@ -42,10 +43,18 @@ const Register = () => {
       <div className="w-ful md:w-1/2 flex flex-col justify-center items-center p-8 md:p-12">
         <form onSubmit={handleSubmit} className='w-full max-w-md bg-white p-8 rounded-lg border shadow-sm'>
           <div className="flex justify-center mb-6">
-            <h2 className='text-xl font-medium'>Rabbit</h2>
+            <h2 className='text-xl font-medium'>HESTIA</h2>
           </div>
-          <h2 className="text-2xl font-bold text-center mb-6 ">Hey there 🖐️!</h2>
-          <p className="text-center mb-6">Enter your username and password to Login</p>
+          {/* Show error message if registration fails */}
+          {error && (
+            <div className="mb-4 text-red-600 text-center font-semibold">
+              {typeof error === "string" && error.toLowerCase().includes("server")
+                ? "Please check the data entered."
+                : error}
+            </div>
+          )}
+          <h2 className="text-2xl font-bold text-center mb-6 ">Hey Rabbit 🖐️!</h2>
+          <p className="text-center mb-6">Enter your username and password to Register</p>
           <div className="mb-4">
             <label className="block text-sm font-semibold mb-2">Name</label>
             <input type="text" value={name} onChange={(e) => setName(e.target.value)} className='w-full p-2 border rounded' placeholder='Enter your Name'/>
@@ -56,7 +65,27 @@ const Register = () => {
           </div>
           <div className="mb-4">
             <label className="block text-sm font-semibold mb-2">Password</label>
-            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className='w-full p-2 border rounded' placeholder='Enter your Password'/>
+            <div className="relative">
+              <input
+                type={showPassword ? "text" : "password"}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className='w-full p-2 border rounded pr-12'
+                placeholder='Enter your Password'
+              />
+              <button
+                type="button"
+                className="absolute right-2 top-1/2 -translate-y-1/2 px-2 py-1 rounded-full bg-gray-100 hover:bg-gray-200 text-xs text-gray-700 border border-gray-300 transition"
+                onClick={() => setShowPassword((prev) => !prev)}
+                tabIndex={-1}
+                aria-label={showPassword ? "Hide password" : "Show password"}
+              >
+                {showPassword ? "Hide" : "Show"}
+              </button>
+            </div>
+            <div className="text-xs text-gray-500 mt-1">
+              Password should be like <span className="font-mono">@Abc1234</span>
+            </div>
           </div>
           <button type='submit' className='w-full bg-black text-white p-2 rounded-lg font-semibold transition'>
             {loading ? "Loading..." : "Sign Up"}

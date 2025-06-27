@@ -11,7 +11,7 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
-  const {user, guestId, loading} = useSelector((state) => state.auth)
+  const {user, guestId, loading, error} = useSelector((state) => state.auth)
   const {cart} = useSelector((state) => state.cart)
 
   // get the redirect parameter and check if its checkout or something
@@ -40,9 +40,15 @@ const Login = () => {
       <div className="w-ful md:w-1/2 flex flex-col justify-center items-center p-8 md:p-12">
         <form onSubmit={handleSubmit } className='w-full max-w-md bg-white p-8 rounded-lg border shadow-sm'>
           <div className="flex justify-center mb-6">
-            <h2 className='text-xl font-medium'>Rabbit</h2>
+            <h2 className='text-xl font-medium'>HESTIA</h2>
           </div>
-          <h2 className="text-2xl font-bold text-center mb-6 ">Hey there 🖐️!</h2>
+          {/* Show error message if login fails */}
+          {error && (
+            <div className="mb-4 text-red-600 text-center font-semibold">
+              {error}
+            </div>
+          )}
+          <h2 className="text-2xl font-bold text-center mb-6 ">Hey Rabbit 🖐️!</h2>
           <p className="text-center mb-6">Enter your username and password to Login</p>
           <div className="mb-4">
             <label className="block text-sm font-semibold mb-2">Email</label>

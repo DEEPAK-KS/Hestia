@@ -81,9 +81,9 @@ generateNewGuestId : (state) =>{
     state.user = action.payload;
     state.error = null;
 })
-.addCase(loginUser.rejected, (state, action) =>{
+.addCase(loginUser.rejected, (state, action) => {
     state.loading = false;
-    state.error = action.payload.message;
+    state.error = action.payload?.message || action.payload || "Login failed";
 })
 
 .addCase(registerUser.pending, (state) =>{
@@ -95,9 +95,9 @@ generateNewGuestId : (state) =>{
     state.user = action.payload;
     state.error = null;
 })
-.addCase(registerUser.rejected, (state, action) =>{
+.addCase(registerUser.rejected, (state, action) => {
     state.loading = false;
-    state.error = action.payload.message;
+    state.error = action.payload?.message || action.payload || "Registration failed";
 })
     }
 })
