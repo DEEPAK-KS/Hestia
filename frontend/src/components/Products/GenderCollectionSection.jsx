@@ -1,6 +1,6 @@
 import React from 'react'
 import mensCollection from '../../assets/mens-collection.webp'
-import womensCollection from '../../assets/womens-Collection.webp'
+import womensCollection from '../../assets/womens-collection.webp'
 import { Link } from 'react-router-dom'
 
 const GenderCollectionSection = () => {
